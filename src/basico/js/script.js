@@ -1,4 +1,8 @@
-function calcularMedia( notas ) {
+//function calcularMedia( notas ) {
+
+const { event } = require("jquery");
+
+    const calcularMedia() = (notas) => {
 
     let soma = 0;
     for( c = 0; c < notas.length; c++) {
@@ -13,7 +17,9 @@ function calcularMedia( notas ) {
 
 let media; // escopo global
 
-function aprovacao( notas ) {
+//function aprovacao( notas ) {
+
+    const aprovacao() = (notas) => {
 
     let media = calcularMedia( notas ); // escopo da função
 
@@ -26,7 +32,9 @@ function aprovacao( notas ) {
 
 // Função Recursivas
 
-function contagemRegressiva(numero){
+//function contagemRegressiva(numero){
+
+    const contagemRegressiva() = (numero) =>{
 
     console.log(numero);  
     
@@ -42,10 +50,11 @@ function contagemRegressiva(numero){
 /* 
  * Formulário envio de dados para cálculo da média 
  */
+
 const formulario1 = document.getElementById('formulario-01');
 
 if(formulario1)
-    formulario1.addEventListener('submit', function( evento ){
+    formulario1.addEventListener('submit', event =>{
 
         evento.preventDefault();
         evento.stopPropagation();
@@ -77,9 +86,11 @@ if(formulario1)
     });
 
 
-function validaCampo(elemento){
+//function validaCampo(elemento){
 
-    elemento.addEventListener('focusout', function(event) {
+    const validaCampo() = (elemento) =>{
+
+    elemento.addEventListener('focusout', event => {
 
         event.preventDefault();
 
@@ -98,9 +109,11 @@ function validaCampo(elemento){
 
 }
 
-function validaCampoNumerico(elemento){
+//function validaCampoNumerico(elemento){
 
-    elemento.addEventListener('focusout', function(event) {
+    const validaCampoNumerico() = (elemento) =>{
+
+    elemento.addEventListener('focusout', event =>{
 
         event.preventDefault();
 
@@ -122,9 +135,11 @@ function validaCampoNumerico(elemento){
 }
 
 
-function validaEmail(elemento){
+//function validaEmail(elemento){
 
-    elemento.addEventListener('focusout', function(event) {
+    const validaEmail() = (elemento) => {
+
+    elemento.addEventListener('focusout', event =>  {
 
         event.preventDefault();
 
